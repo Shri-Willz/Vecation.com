@@ -1,0 +1,44 @@
+/* General popover responsiveness */
+.rdrDateRangePickerWrapper {
+  width: 100%; /* Ensure the picker adjusts to container width */
+  max-width: 100%; /* Prevent overflow */
+  padding: 1rem;
+  border: 2px solid #12A277; /* Indigo border */
+  border-radius: 0.75rem;
+  background: #ffffff; /* White background */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+
+
+/* Responsive grid for smaller screens */
+@media (max-width: 768px) {
+  .rdrMonths {
+    display: flex;
+    flex-direction: column; /* Stack calendars vertically */
+  }
+
+  .rdrMonth {
+    width: 100%; /* Full width for each month */
+  }
+}
+
+/* Day hover and transition effects */
+.rdrDay {
+  transition: all 0.2s ease-in-out;
+}
+
+.rdrDay:hover {
+  background-color: #c7d2fe; /* Light Indigo */
+  color: #12A277; /* Dark Indigo */
+  transform: scale(1.1); /* Slight zoom on hover */
+}
+
+/* Selected days styling */
+.rdrDay.rdrDayStartPreview,
+.rdrDay.rdrDayEndPreview,
+.rdrDay.rdrSelected {
+  background-color: #12A277 !important; /* Indigo-500 */
+  color: white !important;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
